@@ -1,54 +1,39 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "../components/Projects/ProjectCard";
-import Particle from "../components/Particle";
-import pg from "../assets/projects/pg.png";
-import project from "../assets/projects/project.jpeg";
-import lift from "../assets/projects/lift.png";
-import krypto from "../assets/projects/krypto.png";
-import kickstart from "../assets/projects/kickstart.png";
+import ngetrash from "../assets/projects/ngetrash.jpg";
+import peduliBelajar from "../assets/projects/peduli-belajar.png";
 
 const Projects = () => {
   return (
     <Container fluid className="project-section">
-      <Particle />
       <Container>
         <h1 className="project-heading">
           Recent Top <strong className="green">Works </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          Here are a few projects I have worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
 
-          <Col md={4} className="project-card">
+          <Col md={6} className="project-card">
             <ProjectCard
-              imgPath={pg}
+              imgPath={ngetrash}
               isBlog={false}
-              title="Blog Website"
-              description="This blogging application features a RESTful API server built with Nodejs and Expressjs. The data is retrieved from the API server and displayed on a user-friendly interface designed using React, Redux, and styled-components for a seamless experience."
-              ghLink="https://github.com/19sajib/mern-blog-app"
+              title="Project NgeTrash"
+              description="Project NgeTrash is a project that uses the PHP programming language with the Codeigniter 3 framework with a MySQL database. NgeTrash allows users to view the history of waste collection, the status of waste payment payments that have been made, and recycling balances which can later be used to pay waste fees. This project aims to record waste collection from each user."
+              ghLink="https://github.com/ibrahimajifajarromadhon/ngetrash"
+              demoLink="https://ngetrashid.000webhostapp.com/"
             />
           </Col>
-
-          <Col md={4} className="project-card">
+          <Col md={6} className="project-card">
             <ProjectCard
-              imgPath={krypto}
+              imgPath={peduliBelajar}
               isBlog={false}
-              title="Project Krypto"
-              description="Project Krypto is a Web 3 project that utilizes an Ethereum smart contract created using Solidity. It allows users to interact with their Metamask wallet and send Ethereum."
-              ghLink="https://github.com/19sajib/Project-Krypto-Web-3.0"
-              demoLink="https://project-krypto.netlify.app/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={kickstart}
-              isBlog={false}
-              title="Solidity Kickstart"
-              description="Solidity Kickstart is a Web 3 project that utilizes an Ethereum smart contract created using Solidity. It includes all the functionality of a kickstart platform, enabling users to interact with their Metamask wallet, transfer Ethereum and participate in kickstart campaigns."
-              ghLink="https://github.com/19sajib/Solidity-Kickstart"
+              title="Project Peduli Belajar"
+              description="Projects Peduli Belajar is a project that uses the Javascript programming language with the React Js library and collaborates with Back End Java. Care for Learning allows users to see available courses along with their prices, types, ratings, and users can also purchase courses if they are paid, then users can immediately follow the courses they have purchased by following the available videos and tutorials. This project aims to provide online technology courses at affordable prices."
+              ghLink="https://github.com/ibrahimajifajarromadhon/peduli-belajar"
+              demoLink="https://peduli-belajar.vercel.app/"
             />
           </Col>
         </Row>
