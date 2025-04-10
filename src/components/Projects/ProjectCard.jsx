@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
@@ -30,26 +30,26 @@ const ProjectCard = (props) => {
         style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-between",
-          alignContent: "space-between",
         }}
       >
         <Card.Title style={{marginBottom:"15px", marginTop:"-5px", fontWeight:"700"}}>{props.title}</Card.Title>
         <Card.Text style={{ textAlign: "justify", fontSize:"15px" }}>
           {props.description}
         </Card.Text>
+        </Card.Body>
+
         <Button
           variant="primary"
           href={props.ghLink}
           target="_blank"
           style={{
+            margin: "0px 10px 0px 10px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             alignContent: "flex-end",
             textAlign: "center",
             position: "relative",
-            bottom: "0px",
           }}
         >
           <BsGithub /> &nbsp;
@@ -64,21 +64,19 @@ const ProjectCard = (props) => {
             href={props.demoLink}
             target="_blank"
             style={{
-              marginTop: "10px",
+              margin: "10px",
               display: "flex",
               justifyContent: "center",
               alignContent: "flex-end",
               alignItems: "center",
               textAlign: "center",
               position: "static",
-              bottom: "0px",
             }}
           >
             <CgWebsite /> &nbsp;
             {"Demo"}
           </Button>
         )}
-      </Card.Body>
     </Card>
   );
 };

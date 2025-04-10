@@ -1,23 +1,38 @@
-import React from "react";
 import { Col, Row } from "react-bootstrap";
 import {
   SiVisualstudiocode,
   SiVercel,
-  SiNetlify
+  SiNetlify,
+  SiXampp,
+  SiLaragon
 } from "react-icons/si";
+
+const tools = [
+  {
+    icon: <SiVisualstudiocode />,
+  },
+  {
+    icon: <SiVercel />,
+  },
+  {
+    icon: <SiNetlify />,
+  },
+  {
+    icon: <SiXampp />,
+  },
+  {
+    icon: <SiLaragon />,
+  },
+];
 
 const Toolstack = () => {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiVisualstudiocode />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiVercel />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiNetlify />
-      </Col>
+      {tools.map((tool, index) => (
+        <Col xs={4} md={2} className="tech-icons" key={index}>
+          {tool.icon}
+        </Col>
+      ))}
     </Row>
   );
 }

@@ -1,4 +1,3 @@
-import React from "react";
 import { Col, Row } from "react-bootstrap";
 import {
   DiJavascript1,
@@ -12,42 +11,54 @@ import {
   SiHtml5,
   SiPhp,
   SiBootstrap,
-  SiTailwindcss
+  SiTailwindcss,
+  SiReact
 } from "react-icons/si";
+
+const techstack = [
+  {
+    icon: <SiHtml5 />,
+  },
+  {
+    icon: <SiCss3 />,
+  },
+  {
+    icon: <SiPhp />,
+  },
+  {
+    icon: <DiJavascript1 />,
+  },
+  {
+    icon: <SiCodeigniter />,
+  },
+  {
+    icon: <SiLaravel />,
+  },
+  {
+    icon: <SiMysql />,
+  },
+  {
+    icon: <SiBootstrap />,
+  },
+  {
+    icon: <SiTailwindcss />,
+  },
+  {
+    icon: <SiReact />,
+  },
+  {
+    icon: <DiGit />,
+  },
+];
 
 const Techstack = () => {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiHtml5 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiCss3 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPhp />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiCodeigniter />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiLaravel />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiMysql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiBootstrap />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiTailwindcss />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
+      {techstack.map((tech, index) => (
+        <Col xs={4} md={2} className="tech-icons" key={index}>
+          {tech.icon}
+        </Col>
+      ))}
     </Row>
   );
 }
